@@ -1,13 +1,9 @@
-package ru.praktikum.pageobject;
+package ru.practikum.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class OrderPage {
     WebDriver webDriver;
@@ -57,7 +53,7 @@ public class OrderPage {
     // ввести метро Динамо
     public void addMetro() {
         webDriver.findElement(metroList).click();
-        new WebDriverWait(webDriver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(metroStation));
+        new WebDriverWait(webDriver, 5000).until(ExpectedConditions.visibilityOfElementLocated(metroStation));
         webDriver.findElement(metroStation).click();
     }
 
@@ -66,8 +62,18 @@ public class OrderPage {
         webDriver.findElement(phoneNumberInput).sendKeys(number);
     }
 
+
+    //Нажатие на кнопку Далее
     public void clickNextButton() {
         webDriver.findElement(nextButton).click();
     }
 
+    //
+    public String checkHeader() {
+        return webDriver.findElement(orderPageHeader).getText();
+    }
+
+
+
 }
+

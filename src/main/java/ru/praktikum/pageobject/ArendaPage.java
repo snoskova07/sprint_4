@@ -1,13 +1,9 @@
-package ru.praktikum.pageobject;
+package ru.practikum.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class ArendaPage {
 
@@ -87,9 +83,10 @@ public class ArendaPage {
 
     // Надпись Заказ оформлен
     public boolean isOrderComplitedLabelPresent() {
-        new WebDriverWait(webDriver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(orderComplitedLabel));
+        new WebDriverWait(webDriver, (5000)).until(ExpectedConditions.visibilityOfElementLocated(orderComplitedLabel));
         return webDriver.findElement(orderComplitedLabel).isEnabled();
     }
 
 
 }
+
