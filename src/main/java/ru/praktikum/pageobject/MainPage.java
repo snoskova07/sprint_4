@@ -79,7 +79,7 @@ public class MainPage {
 
     //получение текста для 1 вопроса
     public String getTextAnswer(By element) {
-        new WebDriverWait(webDriver,4000)
+        new WebDriverWait(webDriver,3)
                 .until(ExpectedConditions.visibilityOfElementLocated(element));
         return webDriver.findElement(element).getText();
     }

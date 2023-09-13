@@ -50,10 +50,10 @@ public class OrderPage {
         webDriver.findElement(addressInput).sendKeys(address);
     }
 
-    // ввести метро Динамо
+    // ввести метро
     public void addMetro() {
         webDriver.findElement(metroList).click();
-        new WebDriverWait(webDriver, 5000).until(ExpectedConditions.visibilityOfElementLocated(metroStation));
+        new WebDriverWait(webDriver, 3).until(ExpectedConditions.visibilityOfElementLocated(metroStation));
         webDriver.findElement(metroStation).click();
     }
 
