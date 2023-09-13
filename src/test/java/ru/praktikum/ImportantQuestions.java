@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.practikum.pageobject.MainPage;
+import ru.praktikum.pageobject.MainPage;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 

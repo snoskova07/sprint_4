@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.practikum.pageobject.MainPage;
-import ru.practikum.pageobject.OrderPage;
-import ru.practikum.pageobject.ArendaPage;
+import ru.praktikum.pageobject.MainPage;
+import ru.praktikum.pageobject.OrderPage;
+import ru.praktikum.pageobject.ArendaPage;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
@@ -53,8 +53,8 @@ public class CreateOrder {
 
     @Before
     public void setup() {
-        WebDriverManager.chromedriver().setup();
-        webDriver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        webDriver = new FirefoxDriver();
         webDriver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
         mainPage = new MainPage(webDriver);
         orderPage = new OrderPage(webDriver);
